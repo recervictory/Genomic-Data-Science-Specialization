@@ -19,5 +19,5 @@ No | Description | Certificate | Completion Date|
 ---
 ![Statistically Significant](https://imgs.xkcd.com/comics/significant.png)
 
-    ## Finally We found the Right Jelly Bean (p-value < 0.5)
+    ## "An illustration of the hazards of multiple hypothesis tests".
 ---
