@@ -8,9 +8,9 @@ This Specialization covers the concepts and tools to understand, analyze, and in
 
 
 ## There are 6 Courses in this Specialization
-No | Description | Certificate | Completion Date|
+No | Name| Certificate | Completion Date|
 ---| --- | ----| ---|
- 1 | Introduction to Genomic Technologies |  | 
+ 1 | Introduction to Genomic Technologies | [**Click Here**](https://www.coursera.org/account/accomplishments/verify/Q8GWA6BLZ8D9) | Friday, October 8, 2021 |
  2 | Python for Genomic Data Science | | 
 
 
