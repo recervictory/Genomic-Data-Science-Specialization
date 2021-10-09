@@ -10,8 +10,8 @@ This Specialization covers the concepts and tools to understand, analyze, and in
 ## There are 6 Courses in this Specialization
 No | Name| Certificate | Completion Date|
 ---| --- | ----| ---|
- CH01 | [Introduction to Genomic Technologies](https://github.com/recervictory/Genomic-Data-Science-Specialization/tree/master/C01%20Introduction%20to%20Genomic%20Technologies) | [**Click Here**](https://www.coursera.org/account/accomplishments/verify/Q8GWA6BLZ8D9) | Friday, October 8, 2021 |
- CH02 | Python for Genomic Data Science | | 
+ C01 | [Introduction to Genomic Technologies](https://github.com/recervictory/Genomic-Data-Science-Specialization/tree/master/C01%20Introduction%20to%20Genomic%20Technologies) | [**Click Here**](https://www.coursera.org/account/accomplishments/verify/Q8GWA6BLZ8D9) | Friday, October 8, 2021 |
+ C02 | Python for Genomic Data Science | | 
 
 
 
