@@ -15,7 +15,7 @@ This class will provide an introduction to the Python programming language to pe
 - Communicating with the Outside
 - Biopython
 
-### Python Notebooks
+## Python Notebooks
 
 No. | Topic | Notebook Link|
 ---| ---| ---|
