@@ -21,4 +21,4 @@ No. | Topic | Notebook Link|
 ---| ---| ---|
 **Week 01** | **First Steps Toward Programming** | [**Click Here**](https://github.com/recervictory/Genomic-Data-Science-Specialization/blob/master/C02%20-%20Python%20for%20Genomic%20Data%20Science/code/Week01%20-%20FIRST%20STEPS%20TOWARDS%20PROGRAMMING.ipynb) |
 **Week 02** | Data Structures | [**Click Here**]() |
-** Week 03** | **Functions Modules and Packages** | [**Click Here**](https://github.com/recervictory/Genomic-Data-Science-Specialization/blob/master/C02%20-%20Python%20for%20Genomic%20Data%20Science/code/Week03%20-%20Functions%2C%20Modules%20and%20Packages.ipynb) |
+**Week 03** | **Functions Modules and Packages** | [**Click Here**](https://github.com/recervictory/Genomic-Data-Science-Specialization/blob/master/C02%20-%20Python%20for%20Genomic%20Data%20Science/code/Week03%20-%20Functions%2C%20Modules%20and%20Packages.ipynb) |
