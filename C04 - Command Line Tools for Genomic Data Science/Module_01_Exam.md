@@ -32,9 +32,66 @@ NOTE: The apple genome and the apple gene annotations for this project were extr
 > cut -f1,4 apple.genes | sort -u | cut -f2 | sort | uniq -c
 ### `Ans: 2791 - 2662 +`
 
-### How many genes are there on chromosome chr1?
+### Question 7 : How many genes are there on the `-` strand?
 > cut -f1,4 apple.genes | sort -u | cut -f2 | sort | uniq -c
 ### `Ans: 2791 - 2662 +`
 
-### How many genes are there on each chromosome chr2?
-### `Ans: 2058`
+### Question 8: How many genes are there on chromosome chr1?
+> cut -f1,3 apple.genes | sort -u | cut -f2 | sort | uniq -c
+### `Ans: 1624 chr1 2058 chr2 1771 chr3`
+
+### Question 9: How many genes are there on each chromosome chr2?
+> cut -f1,3 apple.genes | sort -u | cut -f2 | sort | uniq -c
+### `Ans: 1624 chr1 2058 chr2 1771 chr3`
+
+### Question 10: How many genes are there on each chromosome chr3?
+> cut -f1,3 apple.genes | sort -u | cut -f2 | sort | uniq -c
+### `Ans: 1624 chr1 2058 chr2 1771 chr3`
+
+### Question 11: How many transcripts are there on chr1?
+> cut -f2,3 apple.genes | cut -f2 | sort | uniq -c
+>  cut -f2,3 apple.genes | sort -u | cut -f2 | sort | uniq -c
+### `Ans: `
+```
+    1625 chr1
+    2059 chr2
+    1772 chr3
+```
+
+### Question 12: How many transcripts are there on chr2?
+> cut -f2,3 apple.genes | cut -f2 | sort | uniq -c
+>  cut -f2,3 apple.genes | sort -u | cut -f2 | sort | uniq -c
+### `Ans: `
+```
+    1625 chr1
+    2059 chr2
+    1772 chr3
+```
+## Question 13: How many transcripts are there on chr3?
+> cut -f2,3 apple.genes | cut -f2 | sort | uniq -c
+>  cut -f2,3 apple.genes | sort -u | cut -f2 | sort | uniq -c
+### `Ans: `
+```
+    1625 chr1
+    2059 chr2
+    1772 chr3
+```
+### Question 14: How many genes are in common between condition A and condition B?
+> cut -f1 apple.conditionA | sort -u > apple.condA.sorted.genes
+> cut -f1 apple.conditionB | sort -u > apple.condB.sorted.genes
+> comm -1 -2 apple.condA.sorted.genes apple.condB.sorted.genes | wc -l
+
+### `Ans:  2410`
+
+### Question 15: How many genes are specific to condition A? 
+> comm -3 -1 apple.condA.sorted.genes apple.condB.sorted.genes | wc -l
+### `Ans:  1205`
+
+### Question 16: How many genes are specific to condition B? 
+> comm -3 -1 apple.condA.sorted.genes apple.condB.sorted.genes | wc -l
+### `Ans:  1243`
+
+### Question 17: How many genes are in common to all three conditions?
+> cut -f1 apple.conditionC | sort -u > apple.condC.sorted.genes
+> cat apple.cond{A,B,C}.sorted.genes | sort | uniq -c | grep -c " 3 "
+### `Ans:  1608`
