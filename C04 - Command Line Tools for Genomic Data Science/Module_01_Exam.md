@@ -94,4 +94,4 @@ NOTE: The apple genome and the apple gene annotations for this project were extr
 ### Question 17: How many genes are in common to all three conditions?
 > cut -f1 apple.conditionC | sort -u > apple.condC.sorted.genes
 > cat apple.cond{A,B,C}.sorted.genes | sort | uniq -c | grep -c " 3 "
-### `Ans:  1608 `
+### `Ans:  1608`
