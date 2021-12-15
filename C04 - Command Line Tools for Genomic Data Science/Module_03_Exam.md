@@ -15,3 +15,29 @@ Generate a bowtie2 index of the wu_0_A genome using bowtie2-build, with the pref
 ```{shell}
 bowtie2-build wu_0.v7.fas wu_0
 ```
+
+1. How many sequences were in the genome?
+```
+cat wu_0.v7.fas | grep ">" | wc -l
+```
+#### Ans: `7`
+
+2. What was the name of the third sequence in the genome file? Give the name only, without the “>” sign.
+```
+cat wu_0.v7.fas | grep ">"
+```
+#### Ans: `mitochondria`
+
+3.  How many index files did the operation create?
+```
+bowtie2-build wu_0.v7.fas wu-index/wu_0
+```
+#### Ans: `6`
+4.  What is the 3-character extension for the index files created?
+#### Ans: `bt2`
+
+6.  How many reads were in the original fastq file?
+```
+cat wu_0_A_wgs.fastq | wc -l
+```
+#### Ans: `589416`
