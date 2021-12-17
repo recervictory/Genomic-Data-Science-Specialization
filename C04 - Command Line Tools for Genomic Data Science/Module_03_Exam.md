@@ -9,7 +9,6 @@ As part of the effort to catalog genetic variation in the plant Arabidopsis thal
 wget https://d396qusza40orc.cloudfront.net/gencommand/gencommand_proj3_data.tar.gz
 ```
 ## Apply to questions 1 - 5: 
-
 Generate a bowtie2 index of the wu_0_A genome using bowtie2-build, with the prefix 'wu_0'. 
 
 ```{shell}
@@ -22,22 +21,86 @@ cat wu_0.v7.fas | grep ">" | wc -l
 ```
 #### Ans: `7`
 
-2. What was the name of the third sequence in the genome file? Give the name only, without the “>” sign.
+2.  What was the name of the third sequence in the genome file? Give the name only, without the “>” sign.
+```
+cat wu_0.v7.fas | grep ">"
+```
+#### Ans: `Chr3`
+
+3. What was the name of the third sequence in the genome file? Give the name only, without the “>” sign.
 ```
 cat wu_0.v7.fas | grep ">"
 ```
 #### Ans: `mitochondria`
 
-3.  How many index files did the operation create?
+4.  How many index files did the operation create?
 ```
 bowtie2-build wu_0.v7.fas wu-index/wu_0
 ```
 #### Ans: `6`
-4.  What is the 3-character extension for the index files created?
+
+5.  What is the 3-character extension for the index files created?
 #### Ans: `bt2`
 
+
+
+## Apply to questions 6 - 14: 
 6.  How many reads were in the original fastq file?
 ```
 cat wu_0_A_wgs.fastq | wc -l
 ```
 #### Ans: `589416`
+
+7. How many matches (alignments) were reported for the original (full-match) setting? Exclude lines in the file containing unmapped reads.
+#### Ans: `147354 - 9635 = 137719`
+```
+bowtie2 -x index/wu_0 -U week03/wu_0_A_wgs.fastq -S week03/Arabidopsis_thaliana.sam
+```
+```
+147354 reads; of these: 
+  147354 (100.00%) were unpaired; of these:
+    9636 (6.54%) aligned 0 times
+    93780 (63.64%) aligned exactly 1 time
+    43938 (29.82%) aligned >1 times
+93.46% overall alignment rate
+```
+
+8. How many matches (alignments) were reported with the local-match setting? Exclude lines in the file containing unmapped reads. 
+#### Ans: ` 147354 - 6310 = 141044`
+```
+bowtie2 -x index/wu_0 -U week03/wu_0_A_wgs.fastq -S week03/Arabidopsis_thaliana.local.sam --local
+```
+```
+147354 reads; of these:
+  147354 (100.00%) were unpaired; of these:
+    6823 (4.63%) aligned 0 times
+    88935 (60.35%) aligned exactly 1 time
+    51596 (35.01%) aligned >1 times
+95.37% overall alignment rate
+```
+9. How many reads were mapped in the scenario in Question 7?
+#### Ans: `137719`
+
+10. How many reads were mapped in the scenario in Question 8?
+#### Ans: `141044`
+
+11. How many reads had multiple matches in the scenario in Question 7? You can find this in the bowtie2 summary; note that by default bowtie2 only reports the best match for each read.
+#### Ans: `43938`
+```
+147354 reads; of these: 
+  147354 (100.00%) were unpaired; of these:
+    9636 (6.54%) aligned 0 times
+    93780 (63.64%) aligned exactly 1 time
+    43938 (29.82%) aligned >1 times  <--- # Ans
+93.46% overall alignment rate
+```
+12. How many reads had multiple matches in the scenario in Question 8? Use the format above. You can တ†nd this in the bowtie2 summary; note that by default bowtie2 only reports the best match for each read.
+#### Ans: `51596`
+
+```
+147354 reads; of these:
+  147354 (100.00%) were unpaired; of these:
+    6823 (4.63%) aligned 0 times
+    88935 (60.35%) aligned exactly 1 time
+    51596 (35.01%) aligned >1 times # Ans
+95.37%
