@@ -104,3 +104,27 @@ bowtie2 -x index/wu_0 -U week03/wu_0_A_wgs.fastq -S week03/Arabidopsis_thaliana.
     88935 (60.35%) aligned exactly 1 time
     51596 (35.01%) aligned >1 times # Ans
 95.37%
+```
+13. How many alignments contained insertions and/or deletions, in the scenario in Question 7?
+#### Ans: `1429 + 1395 - 42 = 2782` 
+````
+cat Arabidopsis_thaliana.sam | grep -v "^#" | cut -f6 | grep 'I' | wc -l
+cat Arabidopsis_thaliana.sam | grep -v "^#" | cut -f6 | grep 'I' | wc -l
+cat Arabidopsis_thaliana.sam | grep -v "^#" | cut -f6 | grep 'I' | grep 'D'| wc -l
+````
+
+14. How many alignments contained insertions and/or deletions, in the scenario in Question 8?
+#### Ans: `1197 + 1453 - 81 = 2569`
+```
+cat Arabidopsis_thaliana.local.sam | grep -v '^#' |cut -f6 | grep 'I'| wc -l
+cat Arabidopsis_thaliana.local.sam | grep -v '^#' |cut -f6 | grep 'D'| wc -l
+cat Arabidopsis_thaliana.local.sam | grep -v '^#' |cut -f6 | grep 'I'| grep 'D'| wc -l
+
+```
+
+15: How many entries were reported for Chr3?
+#### Ans: `61517`
+```
+bcftools mpileup -Ou -f wu_0.v7.fas Arabidopsis_thaliana.sorted.bam | bcftools call -mv -Ov -o Arabidopsis_thaliana.vcf
+cat Arabidopsis_thaliana.sam | grep -v "^#" | grep -v "^@" | cut -f3 | grep  "Chr3" | wc -l
+```
