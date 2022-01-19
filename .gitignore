@@ -1,7 +1,4 @@
 hg38_chr1.fa
-<<<<<<< HEAD
 data
 resource
-=======
-data
->>>>>>> d27d222219a61f77d97ba844f618d7d039d52dc2
+*.gz
