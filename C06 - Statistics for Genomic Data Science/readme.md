@@ -17,8 +17,8 @@
 - R markdown
 - The three tables in genomics
 - The three tables in genomics (in R)
-- Experimental Design: variability, replication, and power
-- Experimental Design: confounding and randomization
+- [Experimental Design: variability, replication, and power](https://www.coursera.org/lecture/statistical-genomics/experimental-design-variability-replication-and-power-14-17-p5l1x)
+- [Experimental Design: confounding and randomization](https://www.coursera.org/lecture/statistical-genomics/experimental-design-confounding-and-randomization-9-26-rdOZB)
 - Exploratory Analysis
 - Exploratory Analysis in R
 - Data transforms
