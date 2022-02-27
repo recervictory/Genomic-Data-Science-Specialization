@@ -2,6 +2,7 @@
 
 """dnautil module contains a few useful functions for dna sequence"""
 
+
 def gc(dna):
     "this function computes the GC percentage of a dna sequence"
     nbases = dna.count('n')+dna.count('N')
